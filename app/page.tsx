@@ -31,7 +31,7 @@ const SHOTS: Shot[] = [
     name: "Wind Turbines",
     label: "FEATURE 01",
     headline: "Wind Turbines",
-    description: "Advanced vertical-axis turbines harvest wind energy at altitude, powering sustainable flight.",
+    description: "At cruising altitudes between 6,000 and 8,000 meters, wind speeds regularly exceed 25 meters per second. This airship integrates dual compact wind turbines designed specifically for high-altitude, low-density air, converting jet stream energy directly into electrical power. Unlike ground-based turbines, relative wind speeds at altitude allow small, lightweight rotors to generate disproportionately large power output. Under favorable conditions, the turbines alone can supply hundreds of kilowatts, and at peak wind speeds, they can meet the full propulsion demand of the airship without burning fuel.",
 
     wide: { cam: [1.65, 0.22, 2.0], look: [1.35, 0.08, 0.3], rotY: 0.35 },
     close: { cam: [1.35, 0.15, 1.4], look: [1.05, 0.05, 0.2], rotY: 0.4 },
@@ -40,7 +40,7 @@ const SHOTS: Shot[] = [
     name: "Carbon Sails",
     label: "FEATURE 02",
     headline: "Carbon Sails",
-    description: "Ultra-lightweight carbon fiber sails maximize lift efficiency while minimizing structural weight.",
+    description: "Five hinged carbon-fiber sails transform the airship’s large surface area into an active energy-harvesting system. Oriented perpendicular to jet stream flow, the sails convert wind force into forward thrust while minimizing drag. The sail geometry and placement are optimized using aerodynamic modeling and finite element analysis, allowing the system to dynamically adjust exposed surface area as wind conditions change. When wind speeds exceed the airship’s cruising velocity, the sails provide sustained propulsion while reducing mechanical load on the engines.",
 
     wide: { cam: [1.05, 0.72, 1.7], look: [0.65, -.2, 0.0], rotY: 0.12 },
     close: { cam: [0.55, 1.02, 1.35], look: [0.55, -.2, 0.0], rotY: 0.05 },
@@ -49,7 +49,7 @@ const SHOTS: Shot[] = [
     name: "Propeller Pods",
     label: "FEATURE 03",
     headline: "Propeller Pods",
-    description: "Gimbaled electric propulsion pods provide precise thrust vectoring for unmatched maneuverability.",
+    description: "Electric swivel propellers provide precise thrust control during ascent, descent, and low-wind conditions. Powered by turbine-generated electricity or stored energy, the propulsion system is designed for efficiency rather than speed. At altitude, propulsion shifts from traditional engine-driven flight to a hybrid mode where wind-generated power drives the propellers, and direct wind force contributes to forward motion. This dual approach enables stable, controllable flight even within highly variable jet stream environments.",
 
     wide: { cam: [1.2, 0.55, 2.25], look: [0.6, 0.18, 0.0], rotY: 0.55 },
     close: { cam: [1.05, 0.35, 1.15], look: [0.95, 0.1, 0.25], rotY: 0.55 },
@@ -58,7 +58,7 @@ const SHOTS: Shot[] = [
     name: "Stabilizing Fins",
     label: "FEATURE 04",
     headline: "Stabilizing Fins",
-    description: "Active stabilization fins with AI-powered control maintain perfect balance in turbulent conditions.",
+    description: "High-altitude winds demand stability. The airship’s rear fins are engineered to counteract pitch, yaw, and roll introduced by turbulent flow while maintaining a low drag profile. Computational fluid dynamics and structural stress testing confirm that fin placement channels wind flow toward the sails and turbines while preserving aerodynamic balance. The result is a platform capable of sustained flight in jet stream conditions without sacrificing control or structural integrity.",
 
     // PULLED WAY UP + zoomed out
     wide:  { cam: [-0.75, 1.45, -3.35], look: [0.10, -0.15, 0.0], rotY: 1.25 },
@@ -466,7 +466,7 @@ export default function AirshipDemo() {
             <div className="text-white/60 text-xs tracking-[0.25em] tabular-nums">{loadProgress}%</div>
           </div>
 
-          <div className="text-white text-4xl md:text-5xl font-semibold tracking-tight">Airship</div>
+          <div className="text-white text-4xl md:text-5xl font-semibold tracking-tight">POWER</div>
           <div className="mt-3 text-white/65 text-sm leading-relaxed">
             Loading model and lighting for a smooth scroll experience.
           </div>
@@ -493,7 +493,7 @@ export default function AirshipDemo() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-6">
         <div className="flex items-center justify-between max-w-screen-2xl mx-auto">
-          <div className="text-white text-xl font-semibold tracking-tight">AIRSHIP</div>
+          <div className="text-white text-xl font-semibold tracking-tight">POWER</div>
           <div className="flex items-center gap-8">
             <a href="#" className="text-white/70 hover:text-white text-sm transition-colors">
               Overview
@@ -513,12 +513,12 @@ export default function AirshipDemo() {
         {/* Hero Section */}
         <section className="h-screen flex items-center justify-center">
           <div ref={heroTextRef} className="text-center px-8">
-            <div className="text-sm text-white/60 mb-4 tracking-[0.2em] uppercase">The Future of Flight</div>
+            <div className="text-sm text-white/60 mb-4 tracking-[0.2em] uppercase">The Future of High-Altitude Flight</div>
             <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold text-white mb-6 tracking-tight text-balance">
-              Airship
+              POWER
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto text-pretty">
-              Reimagining sustainable aviation with cutting-edge design and engineering
+              Propulsion Optimization by Wind Energy Resources - Leveraging Jet Stream Energy to Reduce CO2 Footprint
             </p>
             <div className="mt-12 flex items-center justify-center gap-2 text-white/50 text-sm">
               <div className="w-px h-12 bg-white/30 animate-bounce" />
@@ -550,13 +550,13 @@ export default function AirshipDemo() {
         <section ref={footerRef} className="h-screen flex items-center justify-center px-8">
           <div className="text-center max-w-3xl">
             <h2 className="text-6xl md:text-7xl font-bold text-white mb-6 tracking-tight text-balance">
-              Experience the future
+              Designed for Scale. Built for Impact.
             </h2>
             <p className="text-xl text-white/70 mb-12 text-pretty">
-              Reserve your airship today and be part of the sustainable aviation revolution
+              By harvesting high-altitude wind energy, this airship reduces fuel use, lowers emissions, and rethinks how long-range cargo moves through the sky.
             </p>
             <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/90 transition-colors">
-              Reserve Now
+              Watch Here!
             </button>
           </div>
         </section>
