@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import * as THREE from "three"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js"
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -353,7 +354,10 @@ export default function AirshipDemo() {
     }
 
     // Load model
-    const loader = new GLTFLoader()
+    const loader = new GLTFLoader();
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath("/draco/"); // served from /public/draco
+    loader.setDRACOLoader(dracoLoader);
     loader.load(
       "/models/airship1.glb",
       (gltf) => {
