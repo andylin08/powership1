@@ -555,9 +555,15 @@ export default function AirshipDemo() {
             <p className="text-xl text-white/70 mb-12 text-pretty">
               By harvesting high-altitude wind energy, this airship reduces fuel use, lowers emissions, and rethinks how long-range cargo moves through the sky.
             </p>
-            <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/90 transition-colors">
-              Watch Here!
-            </button>
+            <a
+              href="https://youtu.be/ByLC-EhlYDg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/90 transition-colors">
+                Watch Here!
+              </button>
+            </a>
           </div>
         </section>
       </div>
